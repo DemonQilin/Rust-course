@@ -1,0 +1,14 @@
+# Workspace
+# Es una funcionalidad que cargo que permite tener varios paquetes relacionados bajo un mismo proyecto. Estos paquetes comparten un Cargo.lock (indica información exacta de las dependencias y más), la carpeta de salida y comandos.
+
+# Es util cuando se quiere trabajar con paquetes relacionados que evolucionan juntos. Para correr comando de forma aislada se usa la bandera "-p".
+
+# Se logra usando la section [workspace] del manifiesto
+[workspace]
+
+# En este caso se uso un workspace virtual porque no existe un paquete raiz.
+members=[
+    "blog_api",
+    "blog_web",
+    "blog_shared"
+]
