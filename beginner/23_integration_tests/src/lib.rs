@@ -3,6 +3,15 @@ pub struct SavingsAccount {
 }
 
 impl SavingsAccount {
+    /// Create a `SavingsAccount` with a balance of 0
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use integration_tests::SavingsAccount;
+    /// let account = SavingsAccount::new();
+    /// assert_eq!(*account.get_balance(), 0);
+    /// ```
     pub fn new() -> Self {
         Self { balance: 0 }
     }
